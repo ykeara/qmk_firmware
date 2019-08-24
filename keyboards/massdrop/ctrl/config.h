@@ -54,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SR_EXP_OE_N_PIN             15
 /* SERCOM port to use for Shift Register SPI */
 /* DATAOUT and SCLK must be configured to use hardware pins of this port */
-#define SR_EXP_SERCOM               SERCOM2
+#define SR_EXP_SERCOM_NUM           2
 /* Shift Register SPI Data Out configuration (MCU.SERCOMx.PAD[0] to ShiftRegister.SER) */
 #define SR_EXP_DATAOUT_PORT         PA
 #define SR_EXP_DATAOUT_PIN          12
@@ -93,6 +93,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+
+// Required BOOT key hold time (in ms) for restarting to bootloader -PS081419
+#define BOOTKEY_HOLD_MS		2000
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 //#define LOCKING_SUPPORT_ENABLE
